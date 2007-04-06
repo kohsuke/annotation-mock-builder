@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jvnet.annotation-mock-builder</groupId>
   <artifactId>annotation-mock-builder</artifactId>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
   
   <name>Annotation Mock Builder</name>
@@ -20,8 +20,8 @@
   </build>
   
   <scm>
-    <connection>scm:svn:https://svn.dev.java.net/svn/annotation-mock-builder/tags/annotation-mock-builder-1.0</connection>
-    <developerConnection>scm:svn:https://svn.dev.java.net/svn/annotation-mock-builder/tags/annotation-mock-builder-1.0</developerConnection>
+    <connection>scm:svn:https://annotation-mock-builder.dev.java.net/svn/annotation-mock-builder/tags/annotation-mock-builder-1.0</connection>
+    <developerConnection>scm:svn:https://annotation-mock-builder.dev.java.net/svn/annotation-mock-builder/tags/annotation-mock-builder-1.0</developerConnection>
     <url>https://annotation-mock-builder.dev.java.net/source/browse/annotation-mock-builder/tags/annotation-mock-builder-1.0</url>
   </scm>
   
