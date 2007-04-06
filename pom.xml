@@ -18,7 +18,13 @@
       </plugin>
     </plugins>
   </build>
-
+  
+  <scm>
+    <connection>scm:svn:https://svn.dev.java.net/svn/annotation-mock-builder/trunk/annotation-mock-builder</connection>
+    <developerConnection>scm:svn:https://svn.dev.java.net/svn/annotation-mock-builders/trunk/annotation-mock-builder</developerConnection>
+    <url>https://annotation-mock-builder.dev.java.net/source/browse/annotation-mock-builder/trunk/annotation-mock-builder</url>
+  </scm>
+  
   <dependencies>
     <dependency>
       <groupId>com.sun.codemodel</groupId>
