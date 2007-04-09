@@ -162,7 +162,7 @@ public class MockBuilderMojo extends AbstractMojo {
 
                 // setter
                 JMethod $set = w.method(JMod.PUBLIC, void.class, m.getName());
-                $set.body().assign($field,$set.param(rt,"value"));
+                $set.body().assign(JExpr._this().ref($field),$set.param(rt,"value"));
 
                 // getter
                 w.method(JMod.PUBLIC, rt, m.getName()).body()._return($field);

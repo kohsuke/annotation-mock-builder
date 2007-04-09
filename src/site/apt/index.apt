@@ -1,0 +1,101 @@
+ ------
+ Annotation Mock Builder
+ ------
+ Kohsuke Kawaguchi
+ <kohsuke.kawaguchi@sun.com>
+ ------
+ April 9th, 2007
+
+
+Introduction
+
+  This maven plugin generates "annotation mocks" from annotation interface definitions. Annotation mocks are Java beans that implement the annotation interface, so that you can programatically create instances of them and pass around. The following is a sample annotation mock:
+
+---
+package org.jvnet.jaxb2_commons.mock_annotations;
+
+import javax.xml.bind.annotation.XmlMimeType;
+
+public class XmlMimeTypeBean
+    implements XmlMimeType
+{
+
+    private String value;
+
+    public XmlMimeTypeBean(String value) {
+        this.value = value;
+    }
+
+    public XmlMimeTypeBean() {
+    }
+
+    public Class<XmlMimeType> annotationType() {
+        return XmlMimeType.class;
+    }
+
+    public boolean equals(Object that) {
+        if (!(that instanceof XmlMimeType)) {
+            return false;
+        }
+        if (!value.equals(((XmlMimeTypeBean) that).value)) {
+            return false;
+        }
+        return true;
+    }
+
+    public int hashCode() {
+        int r = 0;
+        r = (r^value.hashCode());
+        return r;
+    }
+
+    public void value(String value) {
+        this.value = value;
+    }
+
+    public String value() {
+        return value;
+    }
+
+}
+---
+
+Usage
+
+  To use this plugin, you need the entry like this in POM:
+
+---
+<project>
+  ...
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jvnet.annotation-mock-builder</groupId>
+        <artifactId>annotation-mock-builder</artifactId>
+        <version>1.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>build-mocks</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <!-- the package to which mocks are generated -->
+          <packageName>org.jvnet.jaxb2_commons.mock_annotations</packageName>
+          <!-- the jar from which annotation mocks are generated -->
+          <jar>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.1</version>
+          </jar>
+        </configuration>
+      </plugin>
+      ...
+    </plugins>
+  </build>
+</project>
+---
+
+  The artifact is available in {{{http://maven2-repository.dev.java.net/}the java.net maven2 repository}}.
