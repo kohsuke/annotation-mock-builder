@@ -1,0 +1,22 @@
+<project name="Annotation mock builder">
+  <bannerLeft>
+    <name>Glassfish</name>
+    <src>https://glassfish.dev.java.net/public/image/glassfish_logo.gif</src>
+    <href>https://glassfish.dev.java.net/</href>
+  </bannerLeft>
+  <skin>
+    <groupId>org.jvnet.maven-javanet-skin</groupId>
+    <artifactId>maven-javanet-skin</artifactId>
+    <version>1.0</version>
+  </skin>
+
+  <body>
+    <links>
+      <item name="Glassfish" href="http://glassfishi.dev.java.net/"/>
+    </links>
+    <menu name="Overview">
+      <item name="Introduction" href="index.html"/>
+    </menu>
+    ${reports}
+  </body>
+</project>

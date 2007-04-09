@@ -25,6 +25,9 @@
       <id>local-repository</id>
       <url>file:${path-to-m2-repo.java.net}</url>
     </repository>
+    <site>
+      <url>file:../www/</url>
+    </site>
   </distributionManagement>
   
   <scm>
