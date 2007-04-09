@@ -12,7 +12,7 @@
 
   <body>
     <links>
-      <item name="Glassfish" href="http://glassfishi.dev.java.net/"/>
+      <item name="Glassfish" href="http://glassfish.dev.java.net/"/>
     </links>
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
